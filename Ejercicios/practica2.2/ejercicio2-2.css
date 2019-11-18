@@ -1,0 +1,23 @@
+ul {
+    /* Este estilo va a reemplazar la bala de la lista*/
+    /* Introduzco un direccionamiento a fichero relativo al mismo directorio de la página*/
+    
+    list-style-image: url('images.jpg');
+  
+    
+    list-style-position: inside;
+    
+
+
+
+    /* Elimina el estilo por defecto de la lista y tambien establece a 0 los margenes 
+    y todos los padding
+    */
+    /*
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    */   
+
+    }
+   
