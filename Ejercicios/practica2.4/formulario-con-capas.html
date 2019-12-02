@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        div{
+            margin: 4px;
+        }
+    
+    </style>
+</head>
+<body>
+
+    <!-- Un formulario tiene 2 atributos principales: action 
+        url donde se envian los datos del formulario
+        y method="POST" como se envían normalmente como POST, no GET
+        POST quiere decir que los datos van en el cuerpo del mensaje http
+    -->
+    <form action="https://eni1qdobktkqk.x.pipedream.net" method="GET">
+
+        <div id="contenedora-formulario" style="width: 700px;height: 600px;background-color: #BEBEBE;">
+
+            <!-- Fila 1-->
+            <div class="clearfix" style="float: none;margin: 0 auto;width: 700px;text-align: center;background-color: white;">
+                -Formulario en capas-
+            </div>
+
+            <!-- Fila 2-->
+            <div class="clearfix">
+                <!-- Celda 1 de la fila 2-->
+                <div style="float: left;width: 80px;">
+                    Nombre:
+                </div>
+
+                <!-- Celda 2 de la fila 2-->
+                <div style="float: left;">
+                    <input type="text" name="nombre" size="20"/>
+                </div>
+
+                 <!-- Celda 2 de la fila 2-->
+                 <div style="float: left;width: 80px;">
+                        F. Nac:
+                    </div>
+    
+                    <!-- Celda 2 de la fila 2-->
+                    <div style="float: left;">
+                        <input type="date" name="fecha"/>
+                    </div>
+                    <div style="float: left;">
+                        DNI:
+                    <input type="text" placeholder="DNI" size="10"  
+                    maxlength="9" name="nif" 
+                    pattern="(([X-Z]{1})([-]?)(\d{7})([-]?)([A-Z]{1}))|((\d{8})([-]?)([A-Z]{1}))" 
+                    title="Introduzca el dni" required/>
+                </div>
+            
+            </div>
+
+
+             <!-- Fila 3-->
+            <div class="clearfix">
+                    <!-- Celda 1 de la fila 1-->
+                    <div style="float: left;width: 80px;">
+                        Apellidos:
+                    </div>
+    
+                    <!-- Celda 2 de la fila 1-->
+                    <div style="float: left;">
+                        <input type="text" name="apellidos" size="20"/>
+                    </div>
+                
+            </div>
+
+
+             <!-- Fila 4-->
+            <div class="clearfix">
+                    <!-- Celda 1 de la fila 4-->
+                    <div style="float: left;width: 80px;">
+                        <input type="reset" value="Limpiar"/>
+                    </div>
+    
+                    <!-- Celda 2 de la fila 4-->
+                    <div style="float: right;">
+                        <input type="submit" value="Enviar"/>
+                    </div>
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+    
+
+
+    </form>
+
+
+
+    
+</body>
+</html>

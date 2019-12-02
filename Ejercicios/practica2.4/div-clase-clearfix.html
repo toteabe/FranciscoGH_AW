@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fila 1:-->
+    <!-- div con clase clearfix que obliga a introducir un salto de línea a continuación de los float left-->
+    <div class="clearfix">
+        <!-- Las celdas de la fila se pintan de izquierda a derecha mediante float: left-->
+        <div style="float:left;height: 50px;width: 100px;background-color: darkorange;"></div>
+        <div style="float:left;height: 100px;width: 200px;background-color: rgb(78, 15, 194);"></div>
+        
+    </div>
+    
+    <!-- Fila 2:-->
+    <!-- div con clase clearfix que obliga a introducir un salto de línea a continuación de los float left-->
+    <div class="clearfix">
+        <!-- Las celdas de la fila se pintan de izquierda a derecha mediante float: left-->
+        <div style="float:left;height: 80px;width: 350px;background-color: rgb(194, 20, 58);"></div>
+        <div style="float:left;height: 150px;width: 400px;background-color: rgb(8, 175, 30);"></div>
+    </div>
+
+
+    <!-- Fila 3:-->
+    <div style="width: 900px;">
+        <div style="float:left;height: 40px;width: 250px;background-color: rgb(46, 20, 194);"></div>
+        <!-- La última celda a rellenar el resto de ancho que quede con float: none; overflow: hidden-->
+        <div style="float: none;width: auto;overflow: hidden;height: 80px;background-color: rgb(163, 197, 12);"></div>
+    </div>
+    
+
+
+    
+</body>
+</html>
