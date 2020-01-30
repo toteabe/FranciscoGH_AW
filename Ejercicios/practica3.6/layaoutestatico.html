@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layaout estático seccion central</title>
+    <style>
+
+        body {
+            color: white;
+            font-weight: bolder;
+        }
+
+        .seccion-central {
+            width: 760px;
+
+            margin: 0 auto; /* La propiedad de seccion central, margin: 0 auto, 
+            equivale a margin-top: 0px; right: auto; bottom: 0px; left: auto;*/
+
+            height: 960px;
+            background-color: yellowgreen;
+        }
+
+        .capa-cabecera {
+            background-color: red;
+            height: 100px;
+            margin-bottom: 8px;
+        }
+
+        .alineado-central {
+            /* CSS3 el 90% de navegadores actuales soportan CSS3*/
+            display: flex;
+
+            /* Alineado vertical*/
+            align-items: center;
+
+            /* Alineado horizontal*/
+            justify-content: center;
+        }
+
+        .capa-navegacion {
+            float: left;
+            width: 200px;
+            min-height: 700px;
+            background-color: green;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .capa-contenido {
+            /* La seccion central tiene de ancho 760px y la capa navegacion
+            tiene de ancho 200px, por lo tanto restamos y la capa contenido el 
+            ancho sera de 560px. Asique quitamos el ancho de aqui, porque hay una
+            clase para todo el ancho
+            width: 560px; */
+            float: left;
+            min-height: 700px;
+            background-color: blue;
+        }
+
+        .a-todo-ancho-restante {
+            float: none !important;
+            width: auto;
+            overflow: hidden;
+        }
+
+        .capa-pie {
+            clear: both;
+            min-height: 160px;
+            background-color:orangered;
+
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="seccion-central">
+
+            <!--Capa cabecera-->
+            <div class="capa-cabecera alineado-central">
+                Cabecera
+            </div>
+
+            <div class="capa-navegacion alineado-central">
+                Navegación
+            </div>
+
+            <div class="capa-contenido alineado-central a-todo-ancho-restante">
+                Contenido
+            </div>
+
+            <div class="capa-pie alineado-central">
+                Pie
+            </div>
+
+    </div>
+    
+</body>
+</html>
