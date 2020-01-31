@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout líquido a todo ancho pantalla</title>
+    <link rel=stylesheet type="text/css" href="reset.css">
+    <style>
+
+        body {
+            color: blue;
+            font-weight: bold;
+        }
+
+        .seccion-central {
+            /*Es para centrar la capa*/
+            margin: 0 auto;
+
+            /*Líquido*/
+            /*width: 80%;*/
+
+            min-height: 960px;
+
+            background-color: yellow;
+        }
+
+        .capa-cabecera {
+            min-height: 100px;
+            background-color: red;
+        }
+
+        .capa-contenido {
+            float: left;
+            width: 80%;
+            background-color: greenyellow;
+            
+        }
+
+        .capa-navegacion {
+            background-color: peru;
+        }
+
+        .capa-pie {
+            /*para resetear los float left, y si hubiera más float left, dentro se
+            fijan a esta capa*/
+            min-height: 224px;
+
+            background-color: red;
+            clear: both;
+        }
+
+        .altura-contenido {
+            min-height: 700px;
+        }
+
+        .alineado-central {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .a-todo-ancho-restante{
+            float: none;
+            width: auto;
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="seccion-central">
+
+        <div class="capa-cabecera alineado-central">
+            Cabecera
+        </div>
+
+        <div class="capa-contenido alineado-central altura-contenido">
+            Contenido
+        </div>
+
+        <div class="capa-navegacion alineado-central altura-contenido">
+            Navegacion
+        </div>
+
+        <div class="capa-pie alineado-central ">
+            Pie
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
